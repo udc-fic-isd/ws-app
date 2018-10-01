@@ -9,6 +9,7 @@
     </formats>
     <fileSets>
         <fileSet>
+            <useDefaultExcludes>false</useDefaultExcludes>
             <includes>
                 <include>**/*</include>
             </includes>
@@ -19,7 +20,6 @@
                 <exclude>**/target/**</exclude>
                 <exclude>**/META-INF/**</exclude> <!-- Created by m2eclipse -->
                 <exclude>.git/**</exclude>
-                <exclude>.gitignore</exclude>
             </excludes>
         </fileSet>
     </fileSets>
