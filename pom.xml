@@ -158,13 +158,6 @@
                 <artifactId>ws-app-model</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- Project XML Util -->
-            <dependency>
-                <groupId>es.udc.ws.app</groupId>
-                <artifactId>ws-app-util</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
