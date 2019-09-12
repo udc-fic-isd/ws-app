@@ -37,12 +37,13 @@
 		<httpclient.version>4.5.6</httpclient.version>
 		<jdom2.version>2.0.6</jdom2.version>
 		<jaxws.version>2.3.0.2</jaxws.version>
-        <ws-util.version>3.2.4</ws-util.version>
-
+        <ws-util.version>3.3.0</ws-util.version>
+		<jackson.version>2.9.9</jackson.version>
+		
 		<!-- JDBC driver properties -->
 		<jdbcDriver.groupId>mysql</jdbcDriver.groupId>
 		<jdbcDriver.artifactId>mysql-connector-java</jdbcDriver.artifactId>
-		<jdbcDriver.version>8.0.11</jdbcDriver.version>
+		<jdbcDriver.version>8.0.12</jdbcDriver.version>
 		<jdbcDriver.className>com.mysql.cj.jdbc.Driver</jdbcDriver.className>
 
 		<!-- Data source properties -->
@@ -56,7 +57,6 @@
 		<mavenResourcesPlugin.version>3.1.0</mavenResourcesPlugin.version>
 		<execMavenPlugin.version>1.6.0</execMavenPlugin.version>
 		<sqlMavenPlugin.version>1.5</sqlMavenPlugin.version>
-		<mavenAssemblyPlugin.version>3.1.0</mavenAssemblyPlugin.version>
 		<jettyMavenPlugin>9.4.9.v20180320</jettyMavenPlugin>
 		<jaxwsMavenPlugin>2.5</jaxwsMavenPlugin>
 		
@@ -146,12 +146,12 @@
 				<artifactId>fluent-hc</artifactId>
 				<version>${httpclient.version}</version>
 			</dependency>
-            <!-- JDOM2 -->
-            <dependency>
-                <groupId>org.jdom</groupId>
-                <artifactId>jdom2</artifactId>
-                <version>${jdom2.version}</version>
-            </dependency>
+			<!-- Jackson -->
+			<dependency>
+    			<groupId>com.fasterxml.jackson.core</groupId>
+			    <artifactId>jackson-databind</artifactId>
+    			<version>${jackson.version}</version>
+			</dependency>
             <!-- Project Model -->
             <dependency>
                 <groupId>es.udc.ws.app</groupId>
@@ -166,17 +166,6 @@
         <!-- =============================================================== -->
         <!-- Filtering -->
         <resources>
-
-            <!-- Apply filtering to files matching the following expressions 
-                in src/main/resources. -->
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <!-- TODO: revisar -->
-                    <include>*.properties</include>
-                </includes>
-            </resource>
 
             <!-- Continue considering resources the files in src/main/resources, 
                 but without applying filtering. -->
@@ -196,17 +185,6 @@
         </resources>
 
         <testResources>
-
-            <!-- Apply filtering to files matching the following expressions 
-                in src/test/resources. -->
-            <testResource>
-                <directory>src/test/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <!-- TODO: revisar -->
-                    <include>*.properties</include>
-                </includes>
-            </testResource>
 
             <!-- Continue considering resources the files in src/test/resources, 
                 but without applying filtering. -->
@@ -312,18 +290,17 @@
                 </executions>
             </plugin>
 
-            <!-- ========================================================== -->
-            <!-- Assembly configuration -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>${mavenAssemblyPlugin.version}</version>
-                <configuration>
-                    <descriptors>
-                        <descriptor>src/main/assembly/src.xml</descriptor>
-                    </descriptors>
-                </configuration>
-            </plugin>
+			<!-- ========================================================== -->
+			<!-- Assembly configuration -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/src.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>            
 
         </plugins>
 
