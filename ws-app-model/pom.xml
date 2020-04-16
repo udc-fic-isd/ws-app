@@ -25,10 +25,6 @@
             <groupId>${jdbcDriver.groupId}</groupId>
             <artifactId>${jdbcDriver.artifactId}</artifactId>
         </dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>fluent-hc</artifactId>
-		</dependency>        
     </dependencies>
 
 </project>
