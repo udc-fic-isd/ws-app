@@ -7,27 +7,7 @@
 
     <distributable/>
 
-    <display-name>WS Events Service</display-name>
-
-    <!-- JAXWS service -->  
-
-    <listener>
-        <listener-class>
-            com.sun.xml.ws.transport.http.servlet.WSServletContextListener
-        </listener-class>
-    </listener>
-
-    <servlet>
-        <servlet-name>WSServlet</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet
-        </servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>WSServlet</servlet-name>
-        <url-pattern>/services/*</url-pattern>
-    </servlet-mapping>
+    <display-name>WS App Service</display-name>
 
     <!-- REST service -->
     <!-- Fill XXX and uncomment the following lines --> 
@@ -43,6 +23,20 @@
     <servlet-mapping>
         <servlet-name>XXXServlet</servlet-name>
         <url-pattern>/xxx/*</url-pattern>
+    </servlet-mapping>
+    -->
+
+   <!-- Thrift service -->
+   <!-- Fill XXX and uncomment the following lines --> 
+   <!--
+    <servlet>
+        <servlet-name>ThriftMovieServiceServlet</servlet-name>
+        <servlet-class>es.udc.ws.app.thriftservice.ThriftXXXServiceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThriftXXXServiceServlet</servlet-name>
+        <url-pattern>/thrift/XXXservice</url-pattern>
     </servlet-mapping>
     -->
 

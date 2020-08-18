@@ -9,6 +9,6 @@
 ## Running the client application
 
 - Configure `ws-app/ws-app-client/src/main/resources/ConfigurationParameters.properties`
-  for specifying the client project service implementation (Rest or Soap) and 
+  for specifying the client project service implementation (Rest or Thrift) and 
   the port number of the web server in the endpoint address (9090 for Jetty, 8080
   for Tomcat)

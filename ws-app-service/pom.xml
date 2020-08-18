@@ -17,10 +17,10 @@
             <groupId>es.udc.ws.app</groupId>
             <artifactId>ws-app-model</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.sun.xml.ws</groupId>
-            <artifactId>jaxws-rt</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>es.udc.ws.app</groupId>
+			<artifactId>ws-app-thrift</artifactId>
+		</dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -31,39 +31,12 @@
         <finalName>ws-app-service</finalName>
         <plugins>
 
-            <!-- Insert into the SEI tag the JAX-WS service class name
-                 implementation and uncomment this plugin -->
-            <!--
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>${jaxwsMavenPlugin}</version>
-				<executions>
-					<execution>
-						<id>wsgen-from-jdk</id>
-						<goals>
-							<goal>wsgen</goal>
-						</goals>
-						<configuration>
-							<executable>${tool.wsgen}</executable>
-							<sei>
-								XXXService
-							</sei>
-							<genWsdl>true</genWsdl>
-							<keep>true</keep>
-							<verbose>true</verbose>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-           -->
-           			
             <!-- ========================================================== -->
             <!-- Jetty configuration -->
             <plugin>
 				<groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>${jettyMavenPlugin}</version>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jettyMavenPlugin.version}</version>
 
 				<configuration>
                     <httpConnector>
