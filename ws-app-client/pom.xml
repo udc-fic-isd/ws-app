@@ -17,14 +17,18 @@
             <groupId>es.udc.ws</groupId>
             <artifactId>ws-util</artifactId>
         </dependency>
-				<dependency>
-					<groupId>es.udc.ws.app</groupId>
-					<artifactId>ws-app-thrift</artifactId>
-				</dependency>				
-				<dependency>
-						<groupId>org.apache.httpcomponents</groupId>
-						<artifactId>fluent-hc</artifactId>
-				</dependency>
+        <dependency>
+            <groupId>es.udc.ws.app</groupId>
+            <artifactId>ws-app-thrift</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
