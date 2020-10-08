@@ -30,7 +30,7 @@
    <!-- Fill XXX and uncomment the following lines --> 
    <!--
     <servlet>
-        <servlet-name>ThriftMovieServiceServlet</servlet-name>
+        <servlet-name>ThriftXXXServiceServlet</servlet-name>
         <servlet-class>es.udc.ws.app.thriftservice.ThriftXXXServiceServlet</servlet-class>
     </servlet>
 
