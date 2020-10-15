@@ -2,6 +2,7 @@
 
 <assembly>
     <id>src</id>
+    <baseDirectory>${project.artifactId}</baseDirectory>
     <formats>
         <format>zip</format>
         <format>tar.gz</format>

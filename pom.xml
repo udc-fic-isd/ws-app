@@ -359,6 +359,8 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>${assemblyMavenPlugin.version}</version>
 				<configuration>
+                    <finalName>${project.artifactId}</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
 					<descriptors>
 						<descriptor>src/main/assembly/src.xml</descriptor>
 					</descriptors>
@@ -389,8 +391,6 @@
 			</plugin>		            
 
         </plugins>
-
-
 
     </build>
 
