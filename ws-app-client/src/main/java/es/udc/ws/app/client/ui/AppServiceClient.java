@@ -1,4 +1,4 @@
-package es.udc.ws.movies.client.ui;
+package es.udc.ws.app.client.ui;
 
 public class AppServiceClient {
     public static void main(String[] args) {
