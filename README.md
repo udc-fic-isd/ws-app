@@ -18,7 +18,7 @@ It requires the database server to be running.
 	cd ws-app-service
 	mvn jetty:run
 
-## Running the service with Tomcat.
+### Running the service with Tomcat
 
 - Copy the `.war` file (`ws-app-service/target/ws-app-service.war`)
   to Tomcat's `webapps` directory.
@@ -32,7 +32,7 @@ It requires the database server to be running.
 
       shutdown.sh
 
-## Running the client application
+### Running the client application
 
 Configure `ws-app-client/src/main/resources/ConfigurationParameters.properties`
 to specify the client implementation (REST or Thrift) to be used and
