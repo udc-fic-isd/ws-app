@@ -14,26 +14,6 @@
 
     <profiles>
         <profile>
-            <id>thrift-0.9.2</id>
-            <dependencies>
-                <dependency>
-                    <groupId>javax.annotation</groupId>
-                    <artifactId>javax.annotation-api</artifactId>
-                    <version>${annotationApi.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>thrift-0.9.3</id>
-            <dependencies>
-                <dependency>
-                    <groupId>javax.annotation</groupId>
-                    <artifactId>javax.annotation-api</artifactId>
-                    <version>${annotationApi.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
             <id>thrift-0.10.0</id>
             <dependencies>
                 <dependency>
@@ -60,6 +40,72 @@
                     <groupId>javax.annotation</groupId>
                     <artifactId>javax.annotation-api</artifactId>
                     <version>${annotationApi.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>thrift-0.13.0</id>
+        </profile>
+        <profile>
+            <id>thrift-0.14.0</id>
+        </profile>
+        <profile>
+            <id>thrift-0.14.1</id>
+        </profile>
+        <profile>
+            <id>thrift-0.14.2</id>
+        </profile>
+        <profile>
+            <id>thrift-0.15.0</id>
+        </profile>
+        <profile>
+            <id>thrift-0.16.0</id>
+        </profile>
+        <profile>
+            <id>thrift-0.17.0</id>
+            <dependencies>
+                <dependency>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>javax.annotation-api</artifactId>
+                    <version>${annotationApi.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-reload4j</artifactId>
+                    <version>${slf4j.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>thrift-0.18.0</id>
+            <dependencies>
+                <dependency>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>javax.annotation-api</artifactId>
+                    <version>${annotationApi.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-reload4j</artifactId>
+                    <version>${slf4j.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>thrift-0.18.1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>javax.annotation-api</artifactId>
+                    <version>${annotationApi.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-reload4j</artifactId>
+                    <version>${slf4j.version}</version>
                 </dependency>
             </dependencies>
         </profile>
